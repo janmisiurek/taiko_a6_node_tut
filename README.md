@@ -1,17 +1,22 @@
 # Przewodnik uruchomienia Taiko L2 Node
 
-Przewodnik ten krok po kroku przeprowadzi Cię przez proces uruchomienia noda Aiko i jego konfiguracje pod proposer.
+Przewodnik ten krok po kroku przeprowadzi Cię przez proces uruchomienia noda Taiko w testowej sieci Holesky.
+
+## Oficjalna Dokumentacja
+
+Możesz zapoznać się z oficjalną dokumentacją dostępną na [docs.taiko.xyz/guides/run-a-taiko-node/](https://docs.taiko.xyz/guides/run-a-taiko-node/).
+
 
 ## To jakieś czary?
 
 Te instrukcje wymagają pewien poziom umiejętności obsługi komputera za pomocą terminala/wiersza poleceń. Jeśli wydaje się to dla Ciebie zbyt skomplikowane, mogę zająć się tym procesem za Ciebie. Oczywiście w zamian za wirtualne szekle - 95 USDT/C, a w cenie:
 
-- postawienie serwera - potrzeba udostępnienia wirtualnej karty płatniczej, z małym limitem transakcyjnym, na pokrycie kosztów serwera. Mogę też przeprowadzić przez proces zakładania serwera na Contabo (kosztuje to dodatkowe 15 usdc) 
+- postawienie serwera - potrzeba udostępnienia wirtualnej karty płatniczej, z małym limitem transakcyjnym, na pokrycie kosztów serwera. (Mogę też przeprowadzić przez proces zakładania serwera na Contabo, kosztuje to dodatkowe 15 usdc)  
 - konfiguracja serwera - potrzebne dane do logowania ssh (w przypadku pominięcia pierwszego punktu)
 - instalacja i konfiguracja noda - potrzebne będą adresy API *http* i *wss* (łatwe do zdobycia)
 
-Jeśli jesteś zainteresowany zapraszam do kontaktu:
-- telegram @misiurr
+Jeśli jesteś zainteresowany/a postawieniem tego noda za Ciebie to zapraszam do kontaktu: 
+- telegram: **@misiurr**
 
   # INSTRUKCJE
 
@@ -26,9 +31,9 @@ Jeśli jesteś zainteresowany zapraszam do kontaktu:
 
 2. Po zalogowaniu wykonaj aktualizację VPS:
 
-   ```bash
-   sudo apt-get update && sudo apt-get upgrade -y
-   ```
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+```
 
 3. Upewnij się że Docker i git jest zainstalowany
 
@@ -39,18 +44,18 @@ docker --version
 ```bash
 git --version
 ```
-image1
+![Alt text](taiko_images/taiko_1.png)
 
 5. Zainstaluj Docker-Compose:
 
-   ```bash
-   sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   ```
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+```
    
 ```bash
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-image2
+![Alt text](taiko_images/takio_2.png)
 
 6. Zainstaluj stn
 
@@ -64,7 +69,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 ```
 
-imagae3
+![Alt text](taiko_images/taiko_3.png)
 
   - Instalacja kompilatora C
 
@@ -78,7 +83,7 @@ sudo apt install build-essential
 cargo install stn
 ```
 
-image_4
+![Alt text](taiko_images/taiko_4.png)
 
 ### Uruchomienie Taiko node przy pomocy stn
 
@@ -88,7 +93,7 @@ image_4
 stn install
 ```
 
-image_5
+![Alt text](taiko_images/taiko_5.png)
 
 
 2. Konfiguracja noda
@@ -100,7 +105,7 @@ image_5
 stn config full
 ```
 
-image_6
+![Alt text](taiko_images/taiko_6.png)
 
 3. Uruchomienie node
 
@@ -112,7 +117,7 @@ stn up
 ```
 stn status
 ```
-UWAGA na początku może fauszywie zwracać syncing 100%, sam proces synchronizacji może być dość długi)
+UWAGA na początku może fauszywie zwracać syncing 100%, sam proces synchronizacji może być dość długi.
 
 	Dashboard dla twojego noda powinien być dostępny pod adresem
 	(zamień localhost na IP twojego VPS):
