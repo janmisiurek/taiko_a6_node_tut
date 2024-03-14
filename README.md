@@ -126,7 +126,7 @@ UWAGA na początku może fauszywie zwracać syncing 100%, sam proces synchroniza
 
  ### A gdzie adres na który mógłby wpaść potencjalny airdrop?
 
-Aby pozwiązać noda z adresem trzeba go skonfigurować na proposer/prover - jak to zrobić jest napisane w oficjalnej dokumentcji, ALE jak twórcy Taiko infomóją przez ich discord:
+Aby pozwiązać noda z adresem trzeba go skonfigurować na proposer/prover - jak to zrobić jest napisane w oficjalnej dokumentcji, ALE jak twórcy Taiko informóją przez ich discord:
 ```
 How do I set up a proposer?
 You currently cannot run a proposer / prover on Taiko’s Katla testnet.
@@ -137,4 +137,4 @@ Keep a lookout for updates on this!
 For now, you can run a plain RPC node which is mainly useful for fun / development purposes.
 ```
 
-Jak coś się w tym temacie zmieni, zaktualizuję instrukcje o konfiguracje noda pod proposer.
+Jak coś się w tym temacie zmieni, zaktualizuję instrukcje o konfigurację noda pod proposer.
